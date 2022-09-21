@@ -38,20 +38,20 @@ public class Safes {
         return locks.length;
     }
 
-    public void showSafe() {
-
+    public String getSafe() {
         StringBuilder s = new StringBuilder("  --");
         for (int i = 0; i < locks.length; i++) {
             s.append(i).append("-".repeat(7));
         }
-        System.out.println(s);
+        s.append("\n");
         for (int i = 0; i < locks.length; i++) {
-            System.out.print("" + i + "|\t");
+            s.append(i).append("|\t");
             for (int j = 0; j < locks[i].length; j++) {
-                System.out.print(locks[i][j] + "\t");
+                s.append(locks[i][j]).append("\t");
             }
-            System.out.println();
+            s.append("\n");
         }
+        return s.toString();
     }
 
     public void move(int row, int column) {

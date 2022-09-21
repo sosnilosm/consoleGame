@@ -8,7 +8,6 @@ import java.util.Scanner;
 */
 
 public class Start {
-
     public static void startGame() {
         GameMenu menu = new GameMenu();
         int size;
@@ -24,14 +23,19 @@ public class Start {
 
         Safes safe = new Safes(size);
 
-        while (!safe.winCheck()) {
-            safe.showSafe();
+        while (menu.exit() && !safe.winCheck()) {
+            menu.show(safe);
             System.out.println("Enter command: ");
             cmd = scanner.nextLine().toLowerCase();
 
             cmdHandler(cmd, menu, safe);
         }
-        menu.win();
+
+        if (safe.winCheck()) {
+            menu.win();
+        }
+
+        menu.bye();
     }
 
     private static void cmdHandler(String cmd, GameMenu menu, Safes safe) {
@@ -45,6 +49,8 @@ public class Start {
             case "reset" -> menu.reset(safe);
 
             case "solution" -> menu.solution(safe);
+
+            case "exit" -> menu.getExit();
 
             default -> menu.unknownCmd();
         }

@@ -1,14 +1,17 @@
 package sosnilosm.consolegame.java;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class GameMenu {
     static Printer mes = new Printer();
+    private boolean exit = true;
     public GameMenu () {
         mes.printRules();
     }
 
+    public void show(Safes safe) {
+        mes.printSafe(safe);
+    }
     public void move(Safes safe) {
         Scanner scanner = new Scanner(System.in);
         int[] row_column = new int[2];
@@ -47,8 +50,7 @@ public class GameMenu {
     }
 
     public void solution(Safes safe) {
-        mes.printSolution();
-        System.out.println(Arrays.deepToString(safe.getSolution()));
+        mes.printSolution(safe);
     }
 
     public void unknownCmd() {
@@ -64,7 +66,7 @@ public class GameMenu {
         String cmd;
 
         while (true) {
-            System.out.println("Do u want to choose Safe size?[Y/n]");
+            mes.printChoose();
             cmd = sc.nextLine().toLowerCase();
             if (cmd.equals("y")) {
                 return true;
@@ -82,7 +84,7 @@ public class GameMenu {
         Scanner sc = new Scanner(System.in);
         int size;
         while (true) {
-            System.out.println("Enter safe size[3-8]:");
+            mes.printEnterSize();
             size = sc.nextInt();
             sc.nextLine();
             if (size <= 8 && size >= 3) {
@@ -91,5 +93,17 @@ public class GameMenu {
                 mes.printValueProblemsERROR();
             }
         }
+    }
+
+    public boolean exit() {
+        return exit;
+    }
+
+    public void getExit() {
+        exit = false;
+    }
+
+    public void bye() {
+        mes.printBye();
     }
 }

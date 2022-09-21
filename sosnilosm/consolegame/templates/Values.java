@@ -32,6 +32,9 @@ public class Values {
     public final static String UNDO = "UNDO LAST MOVE";
     public final static String RESET = "RESET GAME";
     public final static String SOLUTION = "GET SOLUTION STEPS";
+    public final static String CHOOSE = "Do u want to choose Safe size?[Y/n]";
+    public final static String ENTER_SIZE = "Enter safe size[3-8]:";
+    public final static String GOODBYE = "GOODBYE! Have a nice day!";
     public final static String WIN = "\t" + "!!!CONGRATULATIONS!!!".repeat(3) + "\nYou have solved the problem..! You're so smart!!!";
     public final static String UNKNOWN_CMD = "WARNING!!! Unknown command...";
     public final static String SIZE_PROBLEMS = "ERROR WARNING!!! Incorrect size value...";
