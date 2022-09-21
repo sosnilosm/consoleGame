@@ -9,8 +9,7 @@ public class Values {
                 The safe opens only if it is possible to arrange all the handles parallel vertically to each other.
 
                 -m
-                -[row]
-                -[column]
+                -[row][column]
                 \t--To make a move, and then specify the row and column of the crank you want to turn.
 
                 -undo
