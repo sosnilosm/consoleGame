@@ -1,3 +1,5 @@
+package sosnilosm.consolegame;
+
 import sosnilosm.consolegame.java.Start;
 
 public class Main {
