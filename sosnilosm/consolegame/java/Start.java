@@ -1,7 +1,5 @@
 package sosnilosm.consolegame.java;
 
-import sosnilosm.consolegame.templates.Values;
-
 import java.util.Scanner;
 
 
@@ -18,7 +16,7 @@ public class Start {
             size = menu.setSize();
         }
         else {
-            size = Values.rnd(3, 8);
+            size = RndFromRange.getInt(3, 8);
         }
 
         Scanner scanner = new Scanner(System.in);

@@ -1,7 +1,5 @@
 package sosnilosm.consolegame.templates;
 
-import java.util.Random;
-
 public class Values {
     public final static String RULES = """
                 \tRULES
@@ -37,8 +35,4 @@ public class Values {
     public final static String WIN = "\t" + "!!!CONGRATULATIONS!!!".repeat(3) + "\nYou have solved the problem..! You're so smart!!!";
     public final static String UNKNOWN_CMD = "WARNING!!! Unknown command...";
     public final static String SIZE_PROBLEMS = "ERROR WARNING!!! Incorrect size value...";
-    public static int rnd(int min, int max) {
-        Random random = new Random();
-        return random.nextInt(max - min) + min;
-    }
 }

@@ -1,12 +1,10 @@
 package sosnilosm.consolegame.java;
 
-import sosnilosm.consolegame.templates.Values;
-
 import java.util.Arrays;
 import java.util.Stack;
 
 public class Safes {
-    private final int steps = Values.rnd(3, 9); // Number of steps taken by the user
+    private final int steps = RndFromRange.getInt(3, 9); // Number of steps taken by the user
     private final int[][] solution = new int[steps][2]; // Massive of steps to solve game (from first to last)
 
     private final Boolean[][] locks; // Massive containing status of locks in boolean value
@@ -24,8 +22,8 @@ public class Safes {
         }
 
         for (int i = 0; i < steps; i++){
-            int row = Values.rnd(0, locks.length);
-            int column = Values.rnd(0, locks.length);
+            int row = RndFromRange.getInt(0, locks.length);
+            int column = RndFromRange.getInt(0, locks.length);
             sysMove(row, column);
             solution[steps - i - 1][0] = row;
             solution[steps - i - 1][1] = column;
