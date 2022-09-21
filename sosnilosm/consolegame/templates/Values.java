@@ -15,8 +15,8 @@ public class Values {
                 -undo
                 \t--To undo the last move.
 
-                -hint
-                \t--To get a hint.
+                -exit
+                \t--To exit the game.
                 
                 -solution
                 \t--To see how to solve the safe.
