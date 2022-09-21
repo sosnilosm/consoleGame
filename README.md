@@ -1,5 +1,5 @@
 # consoleGame
-## Pilot Brothers Safe console game
+## Pilot brothers safe console game
 
 ## Rules
 This is the console game Pilot Brothers Safe. The safe has many swivel handles that can be positioned horizontally or vertically. The handles are square. There is one rule - when turning the handle, all the handles in the same row and column are turned. The safe opens only if it is possible to arrange all the handles parallel vertically to each other.
