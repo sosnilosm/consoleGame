@@ -11,7 +11,7 @@ public class Start {
     public static void startGame() {
         GameMenu menu = new GameMenu();
         int size;
-        if (menu.getUserChoice()){
+        if (menu.getUserChoice()) {
             size = menu.setSize();
         }
         else {
